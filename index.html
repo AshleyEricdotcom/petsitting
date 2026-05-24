@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paws & Palms | Professional Pet Sitting</title>
+    <style>
+        /* Base Styles & Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        :root {
+            --primary: #FF7A59; /* Warm orange/coral */
+            --secondary: #2E4756; /* Deep navy */
+            --accent: #F4F6F8; /* Light grey */
+            --text: #333333;
+        }
+
+        body {
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        /* Navigation */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 10%;
+            background: white;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 20px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--secondary);
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0.8)), url('https://images.unsplash.com/photo-1541599540903-216a46ca1df0?auto=format&fit=crop&q=80&w=1200') no-repeat center center/cover;
+            height: 70vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0 20px;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            color: var(--secondary);
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 20px;
+            margin-bottom: 30px;
+            max-width: 600px;
+        }
+
+        .btn {
+            background-color: var(--primary);
+            color: white;
+            padding: 12px 28px;
+            border: none;
+            border-radius: 25px;
+            font-size: 18px;
+            font-weight: 600;
+            cursor: pointer;
+            text-decoration: none;
+            transition: transform 0.2s, background-color 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #e66543;
+            transform: translateY(-2px);
+        }
+
+        /* Sections General */
+        section {
+            padding: 80px 10%;
+        }
+
+        section h2 {
+            text-align: center;
+            font-size: 36px;
+            color: var(--secondary);
+            margin-bottom: 40px;
+        }
+
+        /* About Section */
+        .about-content {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+        }
+
+        .about-text {
+            flex: 1;
+        }
+
+        .about-img {
+            flex: 1;
+            width: 100%;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        /* Services Cards */
+        .services {
+            background-color: var(--accent);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card h3 {
+            color: var(--secondary);
+            margin: 15px 0;
+        }
+
+        .price {
+            font-size: 24px;
+            font-weight: bold;
+            color: var(--primary);
+            margin: 10px 0;
+        }
+
+        /* Contact Form */
+        .contact-container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 600;
+        }
+
+        .form-group input, .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .contact-container button {
+            width: 100%;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--secondary);
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 14px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .about-content {
+                flex-direction: column;
+            }
+            .nav-links {
+                display: none; /* Simplification for mobile */
+            }
+            .hero h1 {
+                font-size: 32px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="logo"> Kirstens Paws, Pet Care & Loves </div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="hero" id="home">
+        <h1>Your Pet's Best Friend While You're Away</h1>
+        <p>Reliable, loving, and professional pet sitting and dog walking services tailored to your furry family member's needs.</p>
+        <a href="#contact" class="btn">Book a Meet & Greet</a>
+    </div>
+
+    <!-- About Section -->
+    <section id="about">
+        <h2>About Me</h2>
+        <div class="about-content">
+            <div class="about-text">
+                <p>Hello! I'm your local, dedicated pet caretaker/sitter. I understand that your pets are part of the family, and leaving them behind can be tough. That is why I provide personalized care that keeps their routines intact and their spirits high.</p>
+                <br>
+                <p>Whether it's an energetic pup needing a mid-day run or a senior cat who just wants a quiet cuddle, I offer a safe, attentive, and fun environment. I am fully insured, pet first-aid trained, and ready to provide regular photo and text updates so you have absolute peace of mind.</p>
+            </div>
+            <div>
+                <img class="about-img" src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?auto=format&fit=crop&q=80&w=600" alt="Happy dogs playing">
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <h2>Our Services</h2>
+        <div class="services-grid">
+            <div class="card">
+                <h3>Dog Walking</h3>
+                <p>A fun, 30 to 45-minute neighborhood stroll or park visit to burn off energy and break up the day.</p>
+                <div class="price">$45 / walk</div>
+            </div>
+            <div class="card">
+                <h3>Drop-In Visits</h3>
+                <p>Perfect for cats or independent dogs. Includes feeding, water refresh, litter box cleaning, and playtime.</p>
+                <div class="price">$55 / visit</div>
+            </div>
+            <div class="card">
+                <h3>Overnight Sitting</h3>
+                <p>Premium 24-hour care in the comfort of your own home, maintaining your pet's normal routine.</p>
+                <div class="price">$100 / night</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Get In Touch</h2>
+        <div class="contact-container">
+            <form id="petContactForm">
+                <div class="form-group">
+                    <label for="name">Your Name</label>
+                    <input type="text" id="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="petType">Pet Type & Breed</label>
+                    <input type="text" id="petType" placeholder="e.g., Golden Retriever, Siamese Cat" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Tell me about your pet's needs</label>
+                    <textarea id="message" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="btn">Send Request</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 KIRSTENS Paws & Palms Pet Sitting. All rights reserved.</p>
+    </footer>
+
+    <!-- Form Handling Script -->
+    <script>
+        document.getElementById('petContactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Collect the values
+            const name = document.getElementById('name').value;
+            const pet = document.getElementById('petType').value;
+            
+            // Simple visual confirmation
+            alert(`Thanks, ${name}! I'd love to meet your ${pet}. I will get back to you shortly.`);
+            
+            // Reset form
+            this.reset();
+        });
+    </script>
+</body>
+</html>
+<script>
+    document.getElementById('petContactForm').addEventListener('submit', function(e) {
+        // We no longer stop the form from submitting completely. 
+        // Web3Forms will process it, and by default, show a success page.
+        
+        const name = document.getElementById('name').value;
+        const pet = document.getElementById('petType').value;
+        
+        alert(`Thanks, ${name}! Your request has been sent. I'll be in touch about looking after your ${pet} soon!`);
+    });
+</script>
+<!-- Web3Forms reads this key to know which inbox to route the message to --> kirstgriffin@gmail.com
+<input type="hidden" name="access_key" value="1234abcd-56ef-78gh-90ij-123456abcdef">
+
+
